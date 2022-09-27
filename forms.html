@@ -54,15 +54,112 @@
         
 
           <h3>Music Suggestions</h3>
+          <!--
+            the form tag is used to create a container where all the inputs for a form must be inside.
+            The attributes that are required are name, id, and method.
+
+            name gives descriptive information about about what the form will be used for.
+
+            id allows to reference this form later in other fields and other areas in our code.
+
+            method has two typical values: get and post. Get is used for non personal info. 
+            Post is used for personal info.
+          -->
           <form name="music-suggestions" id="music" method="get">
+            <!--
+              Type="text", name, and id are all needed. its needed when you need the user to fill
+               in the input before submitting the form.
+
+               type is for input.
+               name is the variable used when data is passed to the server.
+               id allows us to reference the inputfrom the labeland from other parts of our code.
+
+               All inputs need labels with the for attribute that links the label to input using the id attribute.
+               when an input is required, it is important to include the word required in the labels text.
+            -->
             <label for="music-type">Please Enter a Music Genre or Song You Suggest I Listen to [required]:</label>
             <input type="text" name="Genre" id="music-type" required />
 
             <br />
             <br />
 
+
+            <h4>What Is Your Favourite Comfort Thing?</h4>
+            <input type="radio" id="boba" name="fav_comfort_thing" value="drink">            
+            <label for="boba">Boba</label><br>
+            <input type="radio" id="sleep" name="fav_comfort_thing" value="sleep">
+            <label for="sleep">Sleep</label><br>
+            <input type="radio" id="none" name="fav_comfort_thing" value="none">
+            <label for="none">None of The Above</label>
+
+
+            <br />
+            <br />
+            <br />
+
+            <h4> </h4>
+            <form name="user-dog-suggestion" id="dog-breed-suggestion" method="get">
+              <label for="dog breeds">
+                Please Enter the Name of the Dog Breed You Are Suggesting (required):
+              </label>
+              <input name="dog breed" type="text" id="dog breeds" required />
+
+              <br />
+              <br />
+
+              <fieldset from="dog-breed-suggestion" name="dog-type">
+                <legend>
+                  What Type of Dog are you Suggesting:
+                </legend>
+              </fieldset>
+
+
+            </form>
+
+            <br />
+            <br />
+            <br />
+
+            <form name="boba-select-form"  id="boba-select-form" method="get">
+              <label for="boba">
+                Select a Bubble Tea Flavor:
+              </label>
+              <select name="boba" id="boba">
+                <option value="green-tea">Green Tea</option>
+                <option value="brown-sugar">Brown Sugar</option>
+                <option value="mango">Mango</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="mango-green-tea">Mango Green Tea</option>
+              </select>
+              <br />
+              <input type="submit" value="Submit">
+            </form>
+
+
+ 
+
+            <!--
+              this is an email input, type, name and id is needed.
+              min and maxlength are optional
+            -->
+            <!--<label for="email-adress">Pleas Enter Your E-mail Address:</label>
+            <input type="email" name="email" id="email-address" minlength="6" maxlength="40" />
+            
+
+               type="password", name and i are all needed.
+
             <label for="password">Please Enter Your Password:</label>
             <input type="password" name="userPassword" id="password" />
+            
+
+            -->
+
+            <br />
+            <br />
+
+
+            <input type="button" onclick="alert('HELLO WORLD, I AM YOUR NEW LORD AND SAVIOR!! >:DD ')" value="Click Me!">
+             
           </form>
 </body>
 </html>
